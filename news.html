@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="news.css">
+  <link rel="stylesheet" type="text/css" href="menu.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="logo">
+      <a href="abtme.html"><img src="ben.jpg" alt="Logo"></a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="menu.html">Home</a></li>
+      <li><a href="Music.html">Music</a></li>
+      <li><a href="news.html">Newsletter</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <ul class="social-icons">
+      <li><a href="https://www.instagram.com/thamonster_2/?hl=fr" target="_blank"><img src="insta.png" alt="Instagram"></a></li>
+      <li><a href="https://www.youtube.com/@ThaMonster/" target="_blank"><img src="youtube.png" alt="YouTube"></a></li>
+    </ul>
+  </nav>
+
+  <section class="newsletter">
+    <div class="newsletter-content">
+      <h2>S'abonner à la newsletter</h2>
+      <p>Recevez nos dernières mises à jour directement dans votre boîte de réception.</p>
+      <form action="subscribe.php" method="post"> <!-- Modifiez l'action -->
+        <div class="form-row">
+          <label for="email">Adresse e-mail :</label>
+          <input type="email" name="email" id="email" required>
+        </div>
+        <div class="form-row">
+          <label for="language">Langue :</label>
+          <select name="language" id="language">
+            <option value="fr">Français</option>
+            <option value="en">English</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <label for="subscribe">
+            <input type="checkbox" name="subscribe" id="subscribe" required>
+            Acceptez-vous de recevoir un mail à chaque nouvelle musique de Thamonster :
+          </label>
+        </div>
+        <div class="form-row">
+          <button type="submit" id="submit-button">Confirmer</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <script>
+    // Empêcher l'envoi du formulaire si la case n'est pas cochée ou si l'e-mail n'est pas valide
+    document.getElementById("newsletter-form").addEventListener("submit", function(event) {
+      var emailInput = document.getElementById("email");
+      var subscribeCheckbox = document.getElementById("subscribe");
+      
+      if (!emailInput.checkValidity()) {
+        event.preventDefault();
+        alert("Veuillez entrer une adresse e-mail valide.");
+      } else if (!subscribeCheckbox.checked) {
+        event.preventDefault();
+        alert("Veuillez accepter de recevoir les e-mails de Thamonster.");
+      }
+    });
+  </script>
+</body>
+</html>

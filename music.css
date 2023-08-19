@@ -1,0 +1,51 @@
+/* ... Autres styles ... */
+
+/* Styles de la section des liens de streaming */
+body {
+    background-color: #f4f4f4; /* Fond gris foncé pour la page */
+    margin: 0; /* Supprime la marge par défaut du corps */
+    font-family: Arial, sans-serif; /* Utilise une police de caractères sans empattement */
+    color: #000000; /* Couleur du texte */
+  }
+  
+  .streaming-section {
+    text-align: center;
+    padding: 40px;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Aligne le contenu verticalement */
+  }
+  
+  .streaming-section h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .streaming-links {
+    background-color: #ccc; /* Fond gris clair pour la section de liens */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .streaming-links a {
+    display: flex; /* Utilise la flexbox pour aligner le texte et l'image */
+    flex-direction: column; /* Empile le texte au-dessus de l'image */
+    align-items: center; /* Centre le contenu horizontalement */
+    margin: 10px;
+    text-decoration: none;
+    color: #333; /* Couleur du texte des liens */
+  }
+  
+  .streaming-links img {
+    width: 100px;
+    height: 100px;
+    object-fit: contain;
+    margin-bottom: 10px; /* Marge entre l'image et le texte */
+  }
+  
